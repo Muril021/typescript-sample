@@ -1,18 +1,25 @@
 class Funcionario{
-    public nome: string;
+    public nomeFunc: string;
     public cpf: string;
     public email: string;
     public tel: number;
-}
-const funcionario = new Funcionario();
 
-const nomeFunc = funcionario.nome = 'Carlos Almeida';
-const cpfFunc = funcionario.cpf = '123.456.789-00';
-const email = funcionario.email = 'carlos.almeida01@gmail.com';
-const tel = funcionario.tel = 21964251678;
+    constructor(nomeFunc: string, cpf: string, email: string, tel: number){
+        this.nomeFunc = nomeFunc;
+        this.cpf = cpf;
+        this.email = email;
+        this.tel = tel;
+    }
+}
+const nomeFunc = prompt('Digite seu nome: ');
+const cpf = prompt('Digite seu CPF: ');
+const email = prompt('Digite seu e-mail: ');
+const tel = Number(prompt('Digite seu telefone: '));
+
+const funcionario = new Funcionario(nomeFunc, cpf, email, tel);
 
 console.log(`Dados do Funcionário:\n\n`);
 console.log(`Nome: ${nomeFunc}`);
-console.log(`CPF: ${cpfFunc}`);
+console.log(`CPF: ${cpf}`);
 console.log(`E-mail: ${email}`);
 console.log(`Telefone para Contato/WhatsApp: ${tel}`);

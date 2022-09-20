@@ -1,15 +1,21 @@
 class Cliente{
-    public nome: string;
-    public cpf: string;
-    public nascimento: string;
-}
-const cliente = new Cliente();
+    public nomeCliente: string;
+    public cpfCliente: string;
+    public nascimentoCliente: string;
 
-const nomeCliente = cliente.nome = 'Murilo Nascimento';
-const cpf = cliente.cpf = '123.456.789-00';
-const nascimento = cliente.nascimento = '20/04/1999';
+    constructor(nomeCliente: string, cpfCliente: string, nascimentoCliente: string){
+        this.nomeCliente = nomeCliente;
+        this.cpfCliente = cpfCliente;
+        this.nascimentoCliente = nascimentoCliente;
+    }
+}
+const nomeCliente = prompt('Digite seu nome: ');
+const cpfCliente = prompt('Digite seu cpf: ');
+const nascimentoCliente = prompt('Digite sua data de nascimento: ');
+
+const cliente = new Cliente(nomeCliente, cpfCliente, nascimentoCliente);
 
 console.log('Dados do Cliente:\n\n');
 console.log(`Nome: ${nomeCliente}`);
-console.log(`CPF: ${cpf}`);
-console.log(`Data de Nascimento: ${nascimento}`);
+console.log(`CPF: ${cpfCliente}`);
+console.log(`Data de Nascimento: ${nascimentoCliente}`);
