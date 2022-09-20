@@ -1,3 +1,5 @@
+import PromptSync=require('prompt-sync');
+
 class Aviao{
     public nomeAviao: string;
     public velocidade: string;

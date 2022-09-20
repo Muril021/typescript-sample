@@ -1,3 +1,5 @@
+import PromptSync=require('prompt-sync');
+
 class Funcionario{
     public nomeFunc: string;
     public cpf: string;

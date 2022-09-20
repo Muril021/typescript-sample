@@ -1,3 +1,5 @@
+import PromptSync=require('prompt-sync');
+
 class Cliente{
     public nomeCliente: string;
     public cpfCliente: string;
